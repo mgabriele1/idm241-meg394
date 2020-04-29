@@ -1,7 +1,4 @@
 /*INITIAL STYLING*/
-@import "normalize.css";
-/*icons*/
-@import url('https://css.gg/css?=|bowl|close|heart|more-alt|search|time');
 /*lucida*/
 @font-face {
     font-family: 'lucida_grandebold';
@@ -155,7 +152,7 @@ img {
 @media screen and (min-width: 600px) {
     .alpha-wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: repeat 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: auto;
         grid-template-areas: 
         "title title"
         "about button"
