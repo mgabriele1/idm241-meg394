@@ -59,6 +59,7 @@ button {
     font-size: 1rem;
     border: none;
     margin: 1rem;
+    cursor: pointer;
 }
 b {
     font-family: futura-pt, sans-serif;
