@@ -1,0 +1,280 @@
+/*INITIAL STYLING*/
+/*lucida*/
+@font-face {
+    font-family: 'lucida_grandebold';
+    src: url('lucidagrande-bold-02-webfont.woff2') format('woff2'),
+         url('lucidagrande-bold-02-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*PART OF ART*/
+body {
+    background-color: white;
+    width: 100%;
+}
+
+/* colors*/
+:root {
+    --h1: #11BC94;
+    --h2: #5BE5C5;
+    --dark: #212121;
+    --accent1: #34AA8F;
+}
+/* elements*/
+body {
+    width: 100%;
+    background-color: white;
+}
+h1 {
+    font-family: lucida_grandebold, sans-serif; /*regular*/
+    font-weight: normal; 
+    font-style: normal;
+    color: var(--h1);
+    text-transform: uppercase;
+}
+h2 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--h2);
+    text-transform: uppercase;
+    padding: .5rem;
+}
+p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 400; /* 400i, 500, 700*/
+    font-style: normal;
+    color: var(--dark);
+    padding: 1rem;
+}
+button {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500; /* 400i, 500, 700*/
+    font-style: normal;
+    color:var(--dark);
+    background-color: var(--h2);
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: none;
+    margin: 1rem;
+}
+b {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--accent1);
+}
+/* images */
+img {
+    max-width:100%;
+    height:auto;
+    padding: 1rem;
+}
+/* grid */
+.dots {
+    border-bottom: 2px dashed var(--h1);
+    width: 95%;
+    height: 50%;
+    grid-area: dots;
+}
+.dots2 {
+    border-bottom: 2px dashed var(--h1);
+    width: 95%;
+    height: 50%;
+    grid-area: dots2;
+}
+.title {
+    grid-area: title; margin: 0 auto 1rem;
+}
+.about {
+    grid-area: about;
+}
+.button {
+    grid-area: button;
+}
+#trigger {
+    grid-area: trigger;
+}
+#rule {
+    grid-area: rule;
+}
+#feedback {
+    grid-area: feedback;
+}
+#landm {
+    grid-area: landm;
+}
+.art-wrapper {
+    grid-area: build;
+}
+.micro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
+    margin: 1rem;
+    justify-self: left;
+}
+.alpha-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "title"
+    "about"
+    "button"
+    "dots"
+    "build"
+    "dots2"
+    "trigger"
+    "rule"
+    "feedback"
+    "landm";
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .alpha-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "title title"
+        "about button"
+        "dots dots"
+        "build build"
+        "build build"
+        "dots2 dots2"
+        "trigger rule"
+        "feedback landm";
+        width: 100%;
+        padding: 2rem;
+    }
+    .micro {
+        align-self: flex-start;
+    }
+     
+}
+
+/* ------------------- ART  --------------------  */
+h3 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700; /* 400i, 500, 700*/
+    font-style: normal;
+    color: black;
+    text-transform: uppercase;
+    padding: 6rem;
+}
+
+.art-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    width: 100%;
+    height: auto;
+    grid-gap: .5rem;
+}
+  
+  .image-holder {
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 100%;
+    height: 15rem;
+}
+
+.text-holder {
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+  #bond {
+      background-image: url(graphics/jamesbond400.jpg);
+    }
+  #box {
+      background-image: url(graphics/boxesbabies400.jpg);
+    }
+  #cmoon {
+    background-image: url(graphics/colormoon400.jpg);
+  }
+  #smoon {
+    background-image: url(graphics/smokemoon400.jpg);
+  }
+  #smoke {
+    background-image: url(graphics/boxpainting400.jpg);
+  }
+  #cake {
+    background-image: url(graphics/cake400.jpg);
+  }
+  #eyes {
+    background-image: url(graphics/eyes400.jpg);
+  }
+  #blue {
+    background-image: url(graphics/blue400.jpg);
+  }
+  
+/* ANIMATION */
+.image-holder:hover {
+    animation: fadein .8s ease-in-out 0s 1 forwards;
+}
+
+@keyframes fadein {
+    from { box-shadow: inset 0 0 0 0px #ffffffaf;}
+    to { box-shadow: inset 0 0 0 120px #ffffffaf;}
+}
+
+.image-holder {
+    animation: fadeout .8s ease-in-out 0s 1 forwards;
+}
+
+@keyframes fadeout {
+    from { box-shadow: inset 0 0 0 120px #ffffffaf;}
+    to { box-shadow: inset 0 0 0 0px #ffffffaf;}
+}
+
+.text-holder:hover {
+    animation: txtin .8s ease-in-out 0s 1 forwards;
+}
+
+@keyframes txtin {
+    from { opacity:0%}
+    to { opacity: 100%;}
+}
+
+.text-holder {
+    animation: txtout .8s ease-in-out 0s 1 forwards;
+}
+
+@keyframes txtout {
+    from { opacity:100%}
+    to { opacity: 0%;}
+}
+
+/* media queries */
+@media screen and (min-width: 575px) {
+    .art-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 775px) {
+    .art-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 975px) {
+    .art-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
