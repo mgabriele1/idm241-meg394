@@ -5,80 +5,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Build</title>
+    <title>Beta Build</title>
     <link rel="stylesheet" href="https://use.typekit.net/qcz2dur.css">
     <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/3011209be5.js" crossorigin="anonymous"></script>
 </head>
 
 <!--BODY-->
 <body>
 <div class="alpha-wrapper">
-    <h1 class="title">IDM 241 Alpha Build</h1>
-    <p class="about">This microinteraction is for my portfolio website, <b>MG Design</b></p>
-    <a href="https://mgabrieleportfolio.com/art.html" target="_blank" class="button"><button>View Website</button></a>
+    <h1 class="title">IDM 241 Beta</h1>
+    <p class="about">This microinteraction will be for my portfolio website, <b>MG Design</b></p>
+    <a href="https:///mgabrieleportfolio.com/projects.html" target="_blank" class="button"><button>View Website</button></a>
     <div class="dots"><p> </p></div>
-    <div class="art-wrapper">
-        <div class="image-holder" id="bond">
-            <div class="text-holder">
-                <h3>007</h3>
-            </div>
+    
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Green House</h2>
+            <i class="fas fa-arrow-right"></i>
+            <h4>a plant care app.</h4>
+            <div class="pic"></div>
+            <button>
+            </button>
         </div>
-        <div class="image-holder" id="smoon">
-            <div class="text-holder">
-                <h3>Fishing for Stars</h3>
-            </div>
-        </div>  
-        <div class="image-holder" id="box">
-            <div class="text-holder">
-                <h3>Boxes & Babies</h3>
-            </div>
+        <div class="card" id="card2">
+            <h2>Musical Astrology</h2>
+            <i class="fas fa-arrow-right"></i>
+            <h4>what music genre are you?</h4>
+            <div class="pic"></div>
+            <button>
+            </button>
         </div>
-        <div class="image-holder" id="cmoon">
-            <div class="text-holder">
-                <h3>Colored Moon</h3>
-            </div>
-        </div>
-        <div class="image-holder" id="smoke">
-            <div class="text-holder">
-                <h3>Exhale</h3>
-            </div>
-        </div>
-        <div class="image-holder" id="cake">
-            <div class="text-holder">
-                <h3>Cake</h3>
-            </div>
-        </div>  
-        <div class="image-holder" id="eyes">
-            <div class="text-holder">
-                <h3>Eyes</h3>
-            </div>
-        </div>  
-        <div class="image-holder" id="blue">
-            <div class="text-holder">
-                <h3>Blue</h3>
-            </div>
-        </div>  
     </div>
+
     <div class="dots2"><p> </p></div>
     <div class="micro" id="trigger">
-        <h2>triggers</h2>
-        <p>The microinteraction is triggered by <b>hovering</b> over any of the images in the grid</p>
+        <h3>triggers</h3>
+        <p>The microinteraction will be triggered by <b>hovering</b> over the image card or <b>clicking</b> on the card. </p>
     </div>
     <div class="micro" id="rule">
-        <h2>rules</h2>
-        <p>The <b>image blur</b> radiates into the center in the shape of the image</p>
-        <p>The image <b>title is displayed</b> over the blur</p>
-        <p><b>After hover</b>, the title disappears and the image blur radiates out from the center</p>
+        <h3>rules</h3>
+        <p>The <b>cirlce</b> will expand to cover about 1/3 of the card</p>
+        <p>The <b>subtitle</b> will change color to white</p>
+        <p>The <b>card image</b> will decrease in saturation</p>
+        <p>The <b>arrow</b> will change in opacity from 0 to 100</p>
+        <p>The title, subtitle, and arrow are positioned <b>above</b> the circle</p>
+        <p>Click brings user to <b>new page</b></p>
     </div>
     <div class="micro" id="feedback">
-        <h2>Feedback</h2>
-        <p>The user <b>sees</b> the image they are hovering over blur and the title of the image display</p>
+        <h3>Feedback</h3>
+        <p>The user will <b>see</b> the card they are hovering over change, with the circle growing, saturation decreasing, subtitle color changing, and arrow appearing</p>
     </div>
     <div class="micro" id="landm">
-        <h2>Loops and Modes</h2>
+        <h3>Loops and Modes</h3>
         <p>There are <b>no loops</b> in this microinteraction</p>
-        <p>This microaction utilizes a <b>mode</b> to blur the image and display the text that appears over the image upon hover</p>
+        <p>This microaction utilizes <b>one mode</b> to take the user to a new page upon clicking</p>
     </div>
 </div>
+<!--SCRIPT-->
+<script src="script.js"></script> 
 </body>
 </html>

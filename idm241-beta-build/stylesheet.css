@@ -12,21 +12,21 @@
     margin: 0;
     padding: 0;
 }
-/*PART OF ART*/
-body {
-    background-color: white;
-    width: 100%;
-}
-
 /* colors*/
 :root {
-    --h1: #11BC94;
-    --h2: #5BE5C5;
+    --h1: #8B1086;
+    --h2: #B556B2;
     --dark: #212121;
-    --accent1: #34AA8F;
+    --accent1: #DB50D7;
+    /* micro colors*/
+    --maroon: #630522;
+    --green: #366d22;
+    --shdow-gray: #e7e7e7;
 }
+
 /* elements*/
 body {
+    background-color: var(--backg);
     width: 100%;
     background-color: white;
 }
@@ -37,10 +37,11 @@ h1 {
     color: var(--h1);
     text-transform: uppercase;
 }
-h2 {
+h3 {
     font-family: futura-pt, sans-serif;
     font-weight: 700; /* 400i, 500, 700*/
     font-style: normal;
+    color: var(--dark);
     color: var(--h2);
     text-transform: uppercase;
     padding: .5rem;
@@ -63,6 +64,7 @@ button {
     font-size: 1rem;
     border: none;
     margin: 1rem;
+    cursor: pointer;
 }
 b {
     font-family: futura-pt, sans-serif;
@@ -98,6 +100,9 @@ img {
 .button {
     grid-area: button;
 }
+.container {
+    grid-area: micro;
+}
 #trigger {
     grid-area: trigger;
 }
@@ -109,9 +114,6 @@ img {
 }
 #landm {
     grid-area: landm;
-}
-.art-wrapper {
-    grid-area: build;
 }
 .micro {
     display: grid;
@@ -129,7 +131,7 @@ img {
     "about"
     "button"
     "dots"
-    "build"
+    "micro"
     "dots2"
     "trigger"
     "rule"
@@ -149,8 +151,7 @@ img {
         "title title"
         "about button"
         "dots dots"
-        "build build"
-        "build build"
+        "micro micro"
         "dots2 dots2"
         "trigger rule"
         "feedback landm";
@@ -162,119 +163,117 @@ img {
     }
      
 }
+ 
+/* MICROINTERACTION CODE */
 
-/* ------------------- ART  --------------------  */
-h3 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 700; /* 400i, 500, 700*/
-    font-style: normal;
-    color: black;
-    text-transform: uppercase;
-    padding: 6rem;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--shdow-gray);
 }
 
-.art-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    width: 100%;
-    height: auto;
-    grid-gap: .5rem;
+.card {
+    position: relative;
+    width: 31.25rem;
+    height: 12.5rem;
+    background-color: #fff;
+    overflow: hidden;
+    margin: .5rem 0 0;
+    cursor: pointer;
+}
+#card2 {
+    margin-bottom: .5rem;
+}
+
+.card h2 {
+    z-index: 99;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    bottom: 0;
+    right: 8.125rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.fa-arrow-right {
+    z-index: 100;
+    position: absolute;
+    right: -3rem;
+    top: 1rem;
+    font-size: 20rem;
+    cursor: pointer;
+    color: #fff;
+    transform: scale(0.05);
+    transition: all 0.2s ease;
 }
   
-  .image-holder {
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center;
-    width: 100%;
-    height: 15rem;
+.card h4 {
+    z-index: 99;
+    position: absolute;
+    top: 1.25rem;
+    right: 4.375rem;
+    color: #333;
+    opacity: 0.7;
+    font-size: .75rem;
+    letter-spacing: .0625;
+    writing-mode: vertical-lr;
+    transition: all 0.2s ease;
 }
 
-.text-holder {
-    width: 100%;
-    height: 100%;
-    opacity: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-  
-  #bond {
-      background-image: url(graphics/jamesbond400.jpg);
-    }
-  #box {
-      background-image: url(graphics/boxesbabies400.jpg);
-    }
-  #cmoon {
-    background-image: url(graphics/colormoon400.jpg);
-  }
-  #smoon {
-    background-image: url(graphics/smokemoon400.jpg);
-  }
-  #smoke {
-    background-image: url(graphics/boxpainting400.jpg);
-  }
-  #cake {
-    background-image: url(graphics/cake400.jpg);
-  }
-  #eyes {
-    background-image: url(graphics/eyes400.jpg);
-  }
-  #blue {
-    background-image: url(graphics/blue400.jpg);
-  }
-  
-/* ANIMATION */
-.image-holder:hover {
-    animation: fadein .8s ease-in-out 0s 1 forwards;
+.pic {
+    z-index: 100;
+    width: 25rem;
+    height: 12.5rem;
+    background-size: 100% 100%;
+    filter: grayscale(100%);
 }
 
-@keyframes fadein {
-    from { box-shadow: inset 0 0 0 0px #ffffffaf;}
-    to { box-shadow: inset 0 0 0 120px #ffffffaf;}
+.card button {
+    position: absolute;
+    right: .875rem;
+    bottom: .875rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    outline:none;
+    transition: all 0.3s ease;
+    mix-blend-mode: hard-light;
+    font-size: 3rem;
+}
+#card1 .pic {
+    background-image: url(graphics/newgreenhouse.jpg);
+} 
+#card1 button {
+    background-color: var(--green);
 }
 
-.image-holder {
-    animation: fadeout .8s ease-in-out 0s 1 forwards;
+#card2 .pic{
+    background-image: url(graphics/newastrology.png);
+}
+#card2 button {
+    background-color: var(--maroon);
 }
 
-@keyframes fadeout {
-    from { box-shadow: inset 0 0 0 120px #ffffffaf;}
-    to { box-shadow: inset 0 0 0 0px #ffffffaf;}
+.cardhover button {
+    transform: scale(16.5);
 }
 
-.text-holder:hover {
-    animation: txtin .8s ease-in-out 0s 1 forwards;
+.cardhover h4 {
+    color: #fff;
 }
-
-@keyframes txtin {
-    from { opacity:0%}
-    to { opacity: 100%;}
+    
+.cardhover .pic {
+    filter: grayscale(0);
+    
 }
-
-.text-holder {
-    animation: txtout .8s ease-in-out 0s 1 forwards;
-}
-
-@keyframes txtout {
-    from { opacity:100%}
-    to { opacity: 0%;}
-}
-
-/* media queries */
-@media screen and (min-width: 575px) {
-    .art-wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (min-width: 775px) {
-    .art-wrapper {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-@media screen and (min-width: 975px) {
-    .art-wrapper {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+.cardhover .fa-arrow-right {
+    transform: scale(0.1);
+    right: -2.25rem;
 }
