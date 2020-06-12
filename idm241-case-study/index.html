@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM 241 Case Study</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qcz2dur.css">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+</head>
+
+<!--BODY-->
+<body>
+<div class="alpha-wrapper">
+    <img src="graphics/hero.png" alt="hero" class="hero">
+    <h1 class="title">IDM 241 Case Study</h1>
+    <div class="about">
+        <h2>Overview</h2>
+        <p>
+            This project is a functional build of three microinteractions, simple and complex. Microinteractions are small animations triggered by hovering, clicking, etc. that greatly contribute to the enjoyability of an interface. For this project, the microinteractions were coded using html, CSS, and JavaScript.
+        </p>
+        <p>
+            I chose to create my microinteractions for my portfolio website (LINK). The first microinteraction is for my art page and is a fade upon hover with the image title displaying in the center. The second microinteraction is for my projects page and is a redesign of the image cards that changes upon hover. The third microinteraction is for my projects page modals and flips through the tabs in the modal upon click.
+        </p>
+        <a href="https://mgabrieleportfolio.com/index.html" target="_blank" class="button"><button>View Website</button></a>
+    </div>
+    <div class="dots"><p> </p></div>
+    <div class="context">
+        <h2>Context & Challenge</h2>
+        <p> 
+            <b>
+                Background
+            </b>
+        </p>
+        <p>
+            This is a coding project in which I was required to create three unique microinteractions. The microinteractions had to be an update for an existing website, but I had the freedom to choose what the microinteractions were. One microinteraction could be a simple microinteraction (easier to code, simpler animation), the other two needed to be complex microinteraction (more difficult to code, more going on in the animation).
+        </p>
+        <p> 
+            <b>
+                Description
+            </b>
+        </p>
+        <p>
+            For my project, I chose to redesign a few pages on my portfolio website. The simple microinteraction was designed for my art page as a way to view the image title without navigating to a new page or modal. This interaction consists of a fade in that occurs upon hover. The complex microinteractions were for my project page. The first microinteraction is a redesign for the project cards. This microinteraction consists of a project card that changes upon hover, with an arrow appearing to prompt the user to continue to the project page modal. The second complex microinteraction is a redesign for the project page modals. This microinteraction consists of a modal with 3 tabs that turn in/ out on cube faces.
+        </p>
+        <p> 
+            <b>
+                The Problem
+            </b>
+        </p>
+        <p>
+            Each microinteraction needed to be functional upon click or hover. This means I needed to use html, CSS, and JavaScript to watch for clicks or hovers and adjust the page accordingly. Each microinteraction should be pleasant and take place over an appropriate amount of time as to not keep users waiting for the microinteraction to run. 
+        </p>
+        <p> 
+            <b>
+                Goals & Objectives
+            </b>
+        </p>
+        <p>
+            The goal of this project is to create microinteractions that are functional, pleasant, and an upgrade of the current microinteractions on the page (if there are any). Along with the coded microinteraction, I need to also identify: the triggers (what starts the microinteraction), the rules (what happens), the feedback (what the user sees), and the loops/ modes (things that repeat/ additional modules).
+        </p>
+    </div>
+    <div class="dots2"><p> </p></div>
+    <div class="process">
+        <h2>Process & Insight</h2>
+        <ol>
+            <li>
+                <p>
+                    I began this project by planning my simple microinteraction. I first documented what website I would be redesigning. 
+                </p>
+                <a href="https://mgabrieleportfolio.com/art.html" target="_blank" class="button"><button>View Website</button></a>
+                <p>
+                    Next I created an animation to show what the microinteraction would look like. 
+                </p>
+                <img src="graphics/examplegif2" alt="example">
+                <p>
+                    Then I listed all the triggers, rules, feedback, and loops/ modes.
+                </p>
+                <div class="trfm">
+                    <div class="micro" id="trigger">
+                        <h2>triggers</h2>
+                        <p>The microinteraction is triggered by <b>hovering</b> over any of the images in the grid</p>
+                    </div>
+                    <div class="micro" id="rule">
+                        <h2>rules</h2>
+                        <p>The <b>image blur</b> radiates into the center in the shape of the image</p>
+                        <p>The image <b>title is displayed</b> over the blur</p>
+                        <p><b>After hover</b>, the title disappears and the image blur radiates out from the center</p>
+                    </div>
+                    <div class="micro" id="feedback">
+                        <h2>Feedback</h2>
+                        <p>The user <b>sees</b> the image they are hovering over blur and the title of the image display</p>
+                    </div>
+                    <div class="micro" id="landm">
+                        <h2>Loops and Modes</h2>
+                        <p>There are <b>no loops</b> in this microinteraction</p>
+                        <p>This microaction utilizes a <b>mode</b> to blur the image and display the text that appears over the image upon hover</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p>
+                    The next step was to code my simple microinteraction. I did this using html and CSS. I used the CSS to place the image as a background image, which allowed me to expand the partially transparent border over the image, creating the illusion of the fade in. I wrote the title text in the html and created a fade in for that timed with the border fade in. Both fades are triggered by hovering over the image.
+                </p>
+                <div class="alpha">
+                    <div class="image-holder" id="bond">
+                        <div class="text-holder">
+                            <h3>007</h3>
+                        </div>
+                    </div>
+                    <div class="image-holder" id="smoon">
+                        <div class="text-holder">
+                            <h3>Fishing for Stars</h3>
+                        </div>
+                    </div>  
+                    <div class="image-holder" id="box">
+                        <div class="text-holder">
+                            <h3>Boxes & Babies</h3>
+                        </div>
+                    </div>
+                    <div class="image-holder" id="cmoon">
+                        <div class="text-holder">
+                            <h3>Colored Moon</h3>
+                        </div>
+                    </div>
+                    <div class="image-holder" id="smoke">
+                        <div class="text-holder">
+                            <h3>Exhale</h3>
+                        </div>
+                    </div>
+                    <div class="image-holder" id="cake">
+                        <div class="text-holder">
+                            <h3>Cake</h3>
+                        </div>
+                    </div>  
+                    <div class="image-holder" id="eyes">
+                        <div class="text-holder">
+                            <h3>Eyes</h3>
+                        </div>
+                    </div>  
+                    <div class="image-holder" id="blue">
+                        <div class="text-holder">
+                            <h3>Blue</h3>
+                        </div>
+                    </div>  
+                </div>
+            </li>
+            <li>
+                <p>
+                    Next, I planned my first complex micro interaction. I documented the website I would be redesigning.
+                </p>
+                <a href="https://mgabrieleportfolio.com/projects.html" target="_blank" class="button"><button>View Website</button></a>
+                <p>
+                I then created an animation to show this microinteraction. 
+                </p>
+                <img src="graphics/greenhouse.gif" alt="example">
+                <p>
+                    I also listed all of the triggers, rules, feedback, and loops/modes.
+                </p>
+                <div class="trfm">
+                    <div class="micro" id="trigger2">
+                        <h2>triggers</h2>
+                        <p>The microinteraction will be triggered by <b>hovering</b> over the image card or <b>clicking</b> on the card. </p>
+                    </div>
+                    <div class="micro" id="rule2">
+                        <h2>rules</h2>
+                        <p>The <b>cirlce</b> will expand to cover about 1/3 of the card</p>
+                        <p>The <b>subtitle</b> will change color to white</p>
+                        <p>The <b>card image</b> will decrease in saturation</p>
+                        <p>The <b>arrow</b> will change in opacity from 0 to 100</p>
+                        <p>The title, subtitle, and arrow are positioned <b>above</b> the circle</p>
+                        <p>Click brings user to <b>new page</b></p>
+                    </div>
+                    <div class="micro" id="feedback2">
+                        <h2>Feedback</h2>
+                        <p>The user will <b>see</b> the card they are hovering over change, with the circle growing, saturation decreasing, subtitle color changing, and arrow appearing</p>
+                    </div>
+                    <div class="micro" id="landm2">
+                        <h2>Loops and Modes</h2>
+                        <p>There are <b>no loops</b> in this microinteraction</p>
+                        <p>This microaction utilizes <b>one mode</b> to take the user to a new page upon clicking</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p>
+                    After this, I began coding my microinteraction. This was the most difficult of the three to code. For this microinteraction I used html, CSS, and JavaScript. I used JavaScript to toggle a class on and off upon hover. In CSS, I added all of the hover changes to that class: circle grow, subtitle change color, arrow appear, etc. This JavaScript addition greatly aided with the functionality of this microinteraction and was all I needed to get it working perfectly.
+                </p>
+                <div class="container">
+                    <div class="card" id="card1">
+                        <h5>Green House</h5>
+                        <i class="fas fa-arrow-right"></i>
+                        <h4>a plant care app.</h4>
+                        <div class="pic"></div>
+                        <button>
+                        </button>
+                    </div>
+                    <div class="card" id="card2">
+                        <h5>Musical Astrology</h5>
+                        <i class="fas fa-arrow-right"></i>
+                        <h4>what music genre are you?</h4>
+                        <div class="pic"></div>
+                        <button>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Next, I planned my final complex microinteraction. I documented the website I would be creating this microinteraction for. 
+                </p>
+                <a href="https://mgabrieleportfolio.com/projects.html" target="_blank" class="button"><button>View Website</button></a>
+                <p>
+                    And I included an animation displaying the microinteraction I planned to build. 
+                </p>
+                <img src="graphics/final-anim.gif" alt="example">
+                <p>
+                    I also noted all of the triggers, rules, feedback, and loops/modes.
+                </p>
+            </li>
+            <li>
+                <p>
+                   Lastly, I built my final microinteraction. For this microinteraction, I used html and CSS. I created a modal that sat next to 3 tab buttons. The modal has a unique screen for each tab. Then I CSS that made each new tab look like it was turning in on a cube face. I designed pages for each tab that match my example project and have clickable content. 
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div class="dots3"><p> </p></div>
+    <div class="solution">
+        <h2>The Solution</h2>
+        <p> 
+            My final product is three microinteractions that I plan to integrate into my portfolio website. One microinteraction is simple, the other two are complex. The simple microinteraction consists of a fade that moves in from the edges upon hover, with the image title displaying in the center. The first complex microinteraction consists of a colored circle that expands upon hover, with the card image fading from grayscale to color as the circle expands. The second complex microinteraction consists of a modal with 3 tabs to the right, when a new tab is clicked, the current tab turns out on a cube face, with the new tab turning in.
+        </p>
+    </div>
+    <div class="dots4"><p> </p></div>
+    <div class="results">
+        <h2>The Results</h2>
+        <p> 
+            Overall, this project is a success. I fulfilled the requirements, designing 3 microinteractions for an existing website, two complex and one simple. Beyond the requirements, the microinteractions themselves are successes, enjoyable and taking place over an appropriate amount of time. This was my first time working with microinteractions, and I learned a lot through the experience of visualizing and building each microinteraction. The one change I would make is to adjust my simple microinteraction to display the full image sizes rather than a cropped square of each. This is something I will work on as I begin to implement these microinteractions in my portfolio.
+        </p>
+    </div>
+    
+</div>
+</body>
+<!--SCRIPT-->
+<script src="script.js"></script> 
+</html>
